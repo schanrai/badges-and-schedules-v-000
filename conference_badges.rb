@@ -9,14 +9,18 @@ def batch_badge_creator(speakers)
 end
 
 
+=begin
+#code below will not work because each_with_index operates on #arrays not single elements which is what names is parsing, the #syntax is correct though
+
 def assign_rooms(speakers)
   speakers.map { |names|
    names.each_with_index { |attendees, index|
    "Hello, #{attendees}! You'll be assigned to room #{index + 1}!"}}
 end
 
+=end
 
-=begin
+
 def assign_rooms(speakers)
   new_array = []
   speakers.each_with_index do |names, index| 
@@ -24,7 +28,7 @@ def assign_rooms(speakers)
   end
 return new_array
 end
-=end
+
 
 
 def printer(speakers)
